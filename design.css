@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-image: url("img/bac.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+}
+.top-details
+{
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    height:40vh;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+.operation{
+    display: flex;
+    width: 100vw;
+    background-color:whitesmoke;
+    align-items: center;
+    justify-content: space-around;
+    height: 9vh;
+}
+.display_budget{
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    background-color:white;
+    width: 100vw;
+}
+.bottom-details{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+.income{
+    width: 20vw;
+    height: 6vh;
+    background-color:rgb(26, 197, 197);
+    margin-bottom: 20px;
+}
+.expense{    
+    width: 20vw;
+    height: 6vh;
+    background-color:tomato;
+    margin-bottom: 10px;
+}
