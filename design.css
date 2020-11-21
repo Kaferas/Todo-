@@ -17,6 +17,15 @@ body{
     align-items: center;
     color:white;
 }
+.top-details h1
+{
+margin-bottom: 20px;
+font-size:2em;
+}
+.top-details h3
+{
+    margin-bottom: 40px;   
+}
 .operation{
     display: flex;
     width: 100vw;
@@ -28,9 +37,10 @@ body{
 .display_budget{
     display: flex;
     flex-direction: row;
-    height: 50vh;
+    height: 52vh;
     background-color:white;
     width: 100vw;
+    overflow:hidden;
 }
 .bottom-details{
     display:flex;
@@ -39,14 +49,55 @@ body{
     align-items: center;
 }
 .income{
-    width: 20vw;
+    width: 23vw;
     height: 6vh;
     background-color:rgb(26, 197, 197);
     margin-bottom: 20px;
 }
 .expense{    
-    width: 20vw;
+    width: 23vw;
     height: 6vh;
     background-color:tomato;
     margin-bottom: 10px;
+}
+.income-case
+{
+    width: 50vw;
+    text-align: center;
+    color:rgb(26, 197, 197);
+    padding-top:10px;
+    font-size:1.2em
+}
+.expense-case
+{
+    width: 50vw;
+    text-align: center;
+    color:tomato;
+    padding-top:10px;
+    font-size:1.2em
+}
+.label,.price,.pourcent
+{
+    display:inline-block;
+    width:100px;
+    background-color:teal;
+}
+select{
+    padding: 5px;
+    width: 5vw;
+    border-radius: 5px;
+    border:1px solid black
+}
+input{
+    padding: 5px;
+    width: 15vw;
+    border-radius: 5px;
+    border:1px solid grey;
+}
+button{
+    width: 4vw;
+    height: 6vh;
+    border-radius: 50%;
+    border:1px solid rgb(23, 127, 158);
+    color:teal;
 }
