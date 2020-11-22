@@ -1,7 +1,8 @@
-*{
+/* *{
     margin:0;
     padding:0;
-}
+    overflow: none;
+} */
 body{
     background-image: url("img/bac.jpg");
     background-size:cover;
@@ -19,19 +20,19 @@ body{
 }
 .top-details h1
 {
-margin-bottom: 20px;
+margin-bottom: 15px;
 font-size:2em;
 }
 .top-details h3
 {
-    margin-bottom: 40px;   
+    margin-bottom: 20px;   
 }
 .operation{
     display: flex;
     width: 100vw;
     background-color:whitesmoke;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 9vh;
 }
 .display_budget{
@@ -52,7 +53,7 @@ font-size:2em;
     width: 23vw;
     height: 6vh;
     background-color:rgb(26, 197, 197);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .expense{    
     width: 23vw;
@@ -66,7 +67,8 @@ font-size:2em;
     text-align: center;
     color:rgb(26, 197, 197);
     padding-top:10px;
-    font-size:1.2em
+    font-size:1.2em;
+    font-weight:5800;
 }
 .expense-case
 {
@@ -74,13 +76,16 @@ font-size:2em;
     text-align: center;
     color:tomato;
     padding-top:10px;
-    font-size:1.2em
+    font-size:1.2em;
+    font-weight:800;
 }
 .label,.price,.pourcent
 {
     display:inline-block;
-    width:100px;
-    background-color:teal;
+    width:auto;
+    height: auto;
+    /* background-color:teal; */
+    line-height: 30px;
 }
 select{
     padding: 5px;
@@ -90,14 +95,15 @@ select{
 }
 input{
     padding: 5px;
-    width: 15vw;
+    width: 20vw;
+    height:3vh;
     border-radius: 5px;
     border:1px solid grey;
 }
 button{
-    width: 4vw;
-    height: 6vh;
+    width: 50px;
+    height: 45px;
     border-radius: 50%;
-    border:1px solid rgb(23, 127, 158);
-    color:teal;
+    border:1px solid rgb(23, 158, 46);
+    color:rgb(33, 34, 34);
 }
