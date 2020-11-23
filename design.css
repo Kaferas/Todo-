@@ -13,19 +13,20 @@ body{
     display: flex;
     width: auto;
     flex-direction: column;
-    height:40vh;
+    height:43vh;
     justify-content: center;
     align-items: center;
     color:white;
 }
 .top-details h1
 {
-margin-bottom: 15px;
+margin-bottom: 5px;
 font-size:2em;
 }
 .top-details h3
 {
-    margin-bottom: 20px;   
+    margin-bottom: 10px;   
+    font-size: 2em;
 }
 .operation{
     display: flex;
@@ -38,7 +39,7 @@ font-size:2em;
 .display_budget{
     display: flex;
     flex-direction: row;
-    height: 52vh;
+    height: 49vh;
     background-color:white;
     width: 100vw;
     overflow:hidden;
@@ -54,12 +55,27 @@ font-size:2em;
     height: 6vh;
     background-color:rgb(26, 197, 197);
     margin-bottom: 10px;
+    display:flex;
 }
 .expense{    
     width: 23vw;
     height: 6vh;
     background-color:tomato;
     margin-bottom: 10px;
+    display:flex;
+}
+.expense>div
+{
+    width: 50vw;
+    line-height: 6vh;
+    text-align: center;
+}
+
+.income>div
+{
+    width: 50vw;
+    line-height: 6vh;
+    text-align: center;
 }
 .income-case
 {
@@ -91,7 +107,11 @@ select{
     padding: 5px;
     width: 5vw;
     border-radius: 5px;
-    border:1px solid black
+    border:1px solid black;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 input{
     padding: 5px;

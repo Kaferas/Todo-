@@ -3,9 +3,26 @@ let expense=document.querySelector(".expense-case")
 let validation=document.querySelector(".validation")
 let description=document.querySelector(".description_text")
 let amount=document.querySelector(".amount_enter")
+let expensed=document.querySelector(".expense").lastElementChild
+let incomed=document.querySelector(".income").lastElementChild
+let Total=document.querySelector(".top-details h3")
+let month=document.querySelector(".total_budget_month")
+
 let sign
 let totalExpense=0
 let totalIncome=0
+
+const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+]
+
+const d = new Date()
+
+
+function pourcent(inmoney ,total)
+{
+    return (inmoney*100)/total
+} 
 
 function createCase(inserted,motif,amount)
 {
@@ -36,6 +53,8 @@ function createCase(inserted,motif,amount)
     inserted.appendChild(element)
 }
 
+month.innerText +=" "+monthNames[d.getMonth()]
+
 validation.addEventListener("click",function(){
         sign=document.getElementById("sign").value
         switch(sign)
@@ -44,6 +63,8 @@ validation.addEventListener("click",function(){
                 if(description.value !== "" && amount.value !== ""){
                     createCase(insert,description.value,amount.value+" Fr")
                     totalIncome+= parseInt(amount.value,10)
+                    incomed.innerText=" + "+totalIncome
+                    Total.innerText=totalIncome-totalExpense
                     description.value =""
                     amount.value=""
                 }
@@ -53,17 +74,18 @@ validation.addEventListener("click",function(){
                 if(description.value !== "" && amount.value !== ""){
                     createCase(expense,description.value,amount.value+" Fr")
                     let elemento=expense.lastElementChild.lastElementChild
-                    elemento.innerText="26%"
                     elemento.style.fontStyle="italic"
                     elemento.style.fontSize="15px"
                     elemento.style.background="rgba(255, 150, 131,.5)"
                     elemento.style.color="black"
                     elemento.style.borderRadius="3px"
                     totalExpense+= parseInt(amount.value,10)
+                    elemento.innerText=Math.round(pourcent(parseInt(amount.value,10),totalIncome))+ "%"
+                    expensed.innerText=" - "+totalExpense
+                    Total.innerText=totalIncome-totalExpense
                     description.value =""
                     amount.value=""
                 }
             break;
         }
 })
-
